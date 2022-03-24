@@ -1,0 +1,1018 @@
+2022-03-16 00:07:49.576 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 623.0035 ms
+2022-03-16 00:07:50.486 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 272.0337 ms
+2022-03-16 00:09:13.161 +01:00 [INF] HTTP POST /api/v1/failure-component responded 401 in 128.6908 ms
+2022-03-16 00:09:46.254 +01:00 [INF] HTTP POST /api/v1/users/authenticate responded 200 in 2919.8569 ms
+2022-03-16 00:10:09.991 +01:00 [INF] HTTP POST /api/v1/failure-component responded 200 in 1011.7455 ms
+2022-03-16 00:11:06.293 +01:00 [INF] HTTP GET /api/v1/failure-component/1 responded 200 in 55.1215 ms
+2022-03-16 00:11:58.642 +01:00 [INF] HTTP PUT /api/v1/failure-component/1 responded 200 in 139.2265 ms
+2022-03-16 01:38:30.899 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 171.9462 ms
+2022-03-16 01:38:31.210 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 153.0774 ms
+2022-03-16 01:39:11.313 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 154.9300 ms
+2022-03-16 01:39:11.762 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 170.9259 ms
+2022-03-16 01:40:03.400 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 178.9936 ms
+2022-03-16 01:40:03.806 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 145.7093 ms
+2022-03-16 01:40:29.138 +01:00 [ERR] HTTP GET /api/v1/failure-component responded 500 in 981.6037 ms
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'usp_get_failure_components' expects parameter '@pageNumber', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.InternalEndExecuteReader(IAsyncResult asyncResult, String endMethod)
+   at System.Data.SqlClient.SqlCommand.EndExecuteReaderInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteReader(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Common.Core.CQRS.QueryHandlers.RepairLabourTime.FailureComponentsCountQueryHandler.Handle(FailureComponentsCountQuery request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\CQRS\QueryHandlers\RepairLabourTime\FailureComponentsCountQueryHandler.cs:line 32
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.CQRS.QueryHandlers.RepairLabourTime.GetFailureComponentsQueryHandler.Handle(GetFailureComponentsQuery request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\CQRS\QueryHandlers\RepairLabourTime\GetFailureComponentsQueryHandler.cs:line 29
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.Services.RepairLabourTimeService.FailureComponentService.GetFailureComponents(PaginateFailureComponent paginate) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\FailureComponentService.cs:line 63
+   at Common.Api.Controllers.v1.FailureComponentController.GetFailureComponents(PaginateFailureComponent paginateFailureComponent) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\FailureComponentController.cs:line 48
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+ClientConnectionId:98b766e4-50d7-413f-a240-7f329984caaf
+Error Number:201,State:4,Class:16
+2022-03-16 01:40:29.410 +01:00 [ERR] Error Processing Request
+2022-03-16 01:40:29.478 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'usp_get_failure_components' expects parameter '@pageNumber', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.InternalEndExecuteReader(IAsyncResult asyncResult, String endMethod)
+   at System.Data.SqlClient.SqlCommand.EndExecuteReaderInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteReader(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Common.Core.CQRS.QueryHandlers.RepairLabourTime.FailureComponentsCountQueryHandler.Handle(FailureComponentsCountQuery request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\CQRS\QueryHandlers\RepairLabourTime\FailureComponentsCountQueryHandler.cs:line 32
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.CQRS.QueryHandlers.RepairLabourTime.GetFailureComponentsQueryHandler.Handle(GetFailureComponentsQuery request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\CQRS\QueryHandlers\RepairLabourTime\GetFailureComponentsQueryHandler.cs:line 29
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.Services.RepairLabourTimeService.FailureComponentService.GetFailureComponents(PaginateFailureComponent paginate) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\FailureComponentService.cs:line 63
+   at Common.Api.Controllers.v1.FailureComponentController.GetFailureComponents(PaginateFailureComponent paginateFailureComponent) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\FailureComponentController.cs:line 48
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+ClientConnectionId:98b766e4-50d7-413f-a240-7f329984caaf
+Error Number:201,State:4,Class:16
+2022-03-16 01:42:15.459 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 212.4712 ms
+2022-03-16 01:42:15.819 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 125.9789 ms
+2022-03-16 01:42:25.079 +01:00 [ERR] HTTP GET /api/v1/failure-component responded 500 in 565.8091 ms
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'usp_get_failure_components' expects parameter '@pageNumber', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.InternalEndExecuteReader(IAsyncResult asyncResult, String endMethod)
+   at System.Data.SqlClient.SqlCommand.EndExecuteReaderInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteReader(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Common.Core.CQRS.QueryHandlers.RepairLabourTime.FailureComponentsCountQueryHandler.Handle(FailureComponentsCountQuery request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\CQRS\QueryHandlers\RepairLabourTime\FailureComponentsCountQueryHandler.cs:line 32
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.CQRS.QueryHandlers.RepairLabourTime.GetFailureComponentsQueryHandler.Handle(GetFailureComponentsQuery request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\CQRS\QueryHandlers\RepairLabourTime\GetFailureComponentsQueryHandler.cs:line 29
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.Services.RepairLabourTimeService.FailureComponentService.GetFailureComponents(PaginateFailureComponent paginate) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\FailureComponentService.cs:line 63
+   at Common.Api.Controllers.v1.FailureComponentController.GetFailureComponents(PaginateFailureComponent paginateFailureComponent) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\FailureComponentController.cs:line 48
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+ClientConnectionId:6a3979ac-20ff-4606-bd48-2c33bc450e41
+Error Number:201,State:4,Class:16
+2022-03-16 01:42:25.198 +01:00 [ERR] Error Processing Request
+2022-03-16 01:42:25.235 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'usp_get_failure_components' expects parameter '@pageNumber', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.InternalEndExecuteReader(IAsyncResult asyncResult, String endMethod)
+   at System.Data.SqlClient.SqlCommand.EndExecuteReaderInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteReader(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Common.Core.CQRS.QueryHandlers.RepairLabourTime.FailureComponentsCountQueryHandler.Handle(FailureComponentsCountQuery request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\CQRS\QueryHandlers\RepairLabourTime\FailureComponentsCountQueryHandler.cs:line 32
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.CQRS.QueryHandlers.RepairLabourTime.GetFailureComponentsQueryHandler.Handle(GetFailureComponentsQuery request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\CQRS\QueryHandlers\RepairLabourTime\GetFailureComponentsQueryHandler.cs:line 29
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.Services.RepairLabourTimeService.FailureComponentService.GetFailureComponents(PaginateFailureComponent paginate) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\FailureComponentService.cs:line 63
+   at Common.Api.Controllers.v1.FailureComponentController.GetFailureComponents(PaginateFailureComponent paginateFailureComponent) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\FailureComponentController.cs:line 48
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+ClientConnectionId:6a3979ac-20ff-4606-bd48-2c33bc450e41
+Error Number:201,State:4,Class:16
+2022-03-16 01:45:04.117 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 176.2052 ms
+2022-03-16 01:45:04.487 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 133.6120 ms
+2022-03-16 01:45:52.591 +01:00 [ERR] HTTP GET /api/v1/failure-component responded 500 in 22608.3892 ms
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'usp_get_failure_components' expects parameter '@pageNumber', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.InternalEndExecuteReader(IAsyncResult asyncResult, String endMethod)
+   at System.Data.SqlClient.SqlCommand.EndExecuteReaderInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteReader(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Common.Core.CQRS.QueryHandlers.RepairLabourTime.FailureComponentsCountQueryHandler.Handle(FailureComponentsCountQuery request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\CQRS\QueryHandlers\RepairLabourTime\FailureComponentsCountQueryHandler.cs:line 32
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.CQRS.QueryHandlers.RepairLabourTime.GetFailureComponentsQueryHandler.Handle(GetFailureComponentsQuery request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\CQRS\QueryHandlers\RepairLabourTime\GetFailureComponentsQueryHandler.cs:line 29
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.Services.RepairLabourTimeService.FailureComponentService.GetFailureComponents(PaginateFailureComponent paginate) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\FailureComponentService.cs:line 63
+   at Common.Api.Controllers.v1.FailureComponentController.GetFailureComponents(PaginateFailureComponent paginateFailureComponent) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\FailureComponentController.cs:line 48
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+ClientConnectionId:f44af1f2-bfd1-451d-a8c9-c6fb8522b61b
+Error Number:201,State:4,Class:16
+2022-03-16 01:45:52.691 +01:00 [ERR] Error Processing Request
+2022-03-16 01:45:52.730 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'usp_get_failure_components' expects parameter '@pageNumber', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.InternalEndExecuteReader(IAsyncResult asyncResult, String endMethod)
+   at System.Data.SqlClient.SqlCommand.EndExecuteReaderInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteReader(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Common.Core.CQRS.QueryHandlers.RepairLabourTime.FailureComponentsCountQueryHandler.Handle(FailureComponentsCountQuery request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\CQRS\QueryHandlers\RepairLabourTime\FailureComponentsCountQueryHandler.cs:line 32
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.CQRS.QueryHandlers.RepairLabourTime.GetFailureComponentsQueryHandler.Handle(GetFailureComponentsQuery request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\CQRS\QueryHandlers\RepairLabourTime\GetFailureComponentsQueryHandler.cs:line 29
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.Services.RepairLabourTimeService.FailureComponentService.GetFailureComponents(PaginateFailureComponent paginate) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\FailureComponentService.cs:line 63
+   at Common.Api.Controllers.v1.FailureComponentController.GetFailureComponents(PaginateFailureComponent paginateFailureComponent) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\FailureComponentController.cs:line 48
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+ClientConnectionId:f44af1f2-bfd1-451d-a8c9-c6fb8522b61b
+Error Number:201,State:4,Class:16
+2022-03-16 01:47:24.446 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 166.1941 ms
+2022-03-16 01:47:24.814 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 150.4303 ms
+2022-03-16 01:47:37.697 +01:00 [INF] HTTP GET /api/v1/failure-component responded 200 in 370.4722 ms
+2022-03-16 01:48:20.192 +01:00 [INF] HTTP GET /api/v1/failure-component?PageNumber=2&PageSize=25 responded 200 in 32.3394 ms
+2022-03-16 01:50:07.882 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 162.5883 ms
+2022-03-16 01:50:08.250 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 137.6989 ms
+2022-03-16 01:50:25.313 +01:00 [INF] HTTP GET /api/v1/failure-component/1 responded 200 in 557.4358 ms
+2022-03-16 01:54:30.244 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 155.8548 ms
+2022-03-16 01:54:30.608 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 134.5892 ms
+2022-03-16 01:55:00.439 +01:00 [ERR] HTTP GET /api/v1/failure-component/1 responded 500 in 131.5190 ms
+System.UnauthorizedAccessException: You're not authorized to carry out this action
+   at Common.Api.Controllers.v1.FailureComponentController.GetFailureComponent(Int32 id) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\FailureComponentController.cs:line 42
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-16 01:55:00.542 +01:00 [ERR] Error Processing Request
+2022-03-16 02:17:24.022 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 172.3167 ms
+2022-03-16 02:17:24.380 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 142.9556 ms
+2022-03-16 02:17:39.253 +01:00 [ERR] HTTP POST /api/v1/failure-components responded 500 in 141.8540 ms
+System.UnauthorizedAccessException: You're not authorized to carry out this action
+   at Common.Api.Controllers.v1.FailureComponentController.PostFailureComponent(CreateFailureComponent failureComponent) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\FailureComponentController.cs:line 31
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-16 02:17:39.357 +01:00 [ERR] Error Processing Request
+2022-03-16 02:18:12.646 +01:00 [INF] HTTP POST /api/v1/users/authenticate responded 200 in 509.7711 ms
+2022-03-16 02:18:28.993 +01:00 [INF] HTTP POST /api/v1/failure-components responded 200 in 370.0304 ms
+2022-03-16 02:18:42.583 +01:00 [INF] HTTP GET /api/v1/failure-components responded 200 in 32.6457 ms
+2022-03-16 02:19:21.668 +01:00 [INF] HTTP GET /api/v1/failure-components/2 responded 200 in 38.8631 ms
+2022-03-16 02:19:55.970 +01:00 [INF] HTTP PUT /api/v1/failure-components/2 responded 200 in 64.8255 ms
+2022-03-16 02:20:05.358 +01:00 [INF] HTTP GET /api/v1/failure-components/2 responded 200 in 12.9433 ms
+2022-03-16 02:20:44.389 +01:00 [INF] HTTP DELETE /api/v1/failure-components/2 responded 200 in 126.8087 ms
+2022-03-16 02:20:56.451 +01:00 [ERR] HTTP DELETE /api/v1/failure-components/2 responded 500 in 188.6944 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: Failure component with id : 2 doesn't exist
+   at Common.Core.CQRS.QueryHandlers.RepairLabourTime.GetFailureComponentQueryHandler.Handle(GetFailureComponentQuery request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\CQRS\QueryHandlers\RepairLabourTime\GetFailureComponentQueryHandler.cs:line 30
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.Services.RepairLabourTimeService.FailureComponentService.GetFailureComponent(Int32 id) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\FailureComponentService.cs:line 65
+   at Common.Core.Services.RepairLabourTimeService.FailureComponentService.DeleteFailureComponent(Int32 id) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\FailureComponentService.cs:line 58
+   at Common.Api.Controllers.v1.FailureComponentController.DeleteFailureComponent(Int32 id) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\FailureComponentController.cs:line 60
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-16 02:20:56.458 +01:00 [ERR] Error Processing Request
+2022-03-16 02:21:08.252 +01:00 [ERR] HTTP DELETE /api/v1/failure-components/2 responded 500 in 168.2874 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: Failure component with id : 2 doesn't exist
+   at Common.Core.CQRS.QueryHandlers.RepairLabourTime.GetFailureComponentQueryHandler.Handle(GetFailureComponentQuery request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\CQRS\QueryHandlers\RepairLabourTime\GetFailureComponentQueryHandler.cs:line 30
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.Services.RepairLabourTimeService.FailureComponentService.GetFailureComponent(Int32 id) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\FailureComponentService.cs:line 65
+   at Common.Core.Services.RepairLabourTimeService.FailureComponentService.DeleteFailureComponent(Int32 id) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\FailureComponentService.cs:line 58
+   at Common.Api.Controllers.v1.FailureComponentController.DeleteFailureComponent(Int32 id) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\FailureComponentController.cs:line 60
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-16 02:21:08.256 +01:00 [ERR] Error Processing Request
+2022-03-16 02:21:11.160 +01:00 [ERR] HTTP DELETE /api/v1/failure-components/2 responded 500 in 144.6033 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: Failure component with id : 2 doesn't exist
+   at Common.Core.CQRS.QueryHandlers.RepairLabourTime.GetFailureComponentQueryHandler.Handle(GetFailureComponentQuery request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\CQRS\QueryHandlers\RepairLabourTime\GetFailureComponentQueryHandler.cs:line 30
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.Services.RepairLabourTimeService.FailureComponentService.GetFailureComponent(Int32 id) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\FailureComponentService.cs:line 65
+   at Common.Core.Services.RepairLabourTimeService.FailureComponentService.DeleteFailureComponent(Int32 id) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\FailureComponentService.cs:line 58
+   at Common.Api.Controllers.v1.FailureComponentController.DeleteFailureComponent(Int32 id) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\FailureComponentController.cs:line 60
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-16 02:21:11.161 +01:00 [ERR] Error Processing Request
+2022-03-16 02:21:12.339 +01:00 [ERR] HTTP DELETE /api/v1/failure-components/2 responded 500 in 154.0748 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: Failure component with id : 2 doesn't exist
+   at Common.Core.CQRS.QueryHandlers.RepairLabourTime.GetFailureComponentQueryHandler.Handle(GetFailureComponentQuery request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\CQRS\QueryHandlers\RepairLabourTime\GetFailureComponentQueryHandler.cs:line 30
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.Services.RepairLabourTimeService.FailureComponentService.GetFailureComponent(Int32 id) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\FailureComponentService.cs:line 65
+   at Common.Core.Services.RepairLabourTimeService.FailureComponentService.DeleteFailureComponent(Int32 id) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\FailureComponentService.cs:line 58
+   at Common.Api.Controllers.v1.FailureComponentController.DeleteFailureComponent(Int32 id) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\FailureComponentController.cs:line 60
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-16 02:21:12.341 +01:00 [ERR] Error Processing Request
+2022-03-16 11:10:04.761 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 536.6558 ms
+2022-03-16 11:10:05.559 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 183.3541 ms
+2022-03-16 11:12:20.825 +01:00 [INF] HTTP GET /api/v1/failure-components responded 200 in 1143.9832 ms
+2022-03-16 11:13:46.175 +01:00 [INF] HTTP GET /api/v1/failure-components?PageNumber=3&PageSize=25 responded 200 in 29.3420 ms
+2022-03-16 13:34:16.331 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 170.0331 ms
+2022-03-16 13:34:16.696 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 146.3925 ms
+2022-03-16 13:35:27.316 +01:00 [ERR] HTTP POST /api/v1/failure-components/2/maintenance-item responded 500 in 298.4929 ms
+System.UnauthorizedAccessException: You're not authorized to carry out this action
+   at Common.Api.Controllers.v1.MaintenanceItemController.PostMaintenanceItem(CreateMaintenanceItem maintenanceItem) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\MaintenanceItemController.cs:line 33
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-16 13:35:27.463 +01:00 [ERR] Error Processing Request
+2022-03-16 13:50:31.791 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 165.0135 ms
+2022-03-16 13:50:32.114 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 145.0477 ms
+2022-03-16 13:51:23.147 +01:00 [ERR] HTTP POST /api/v1/failure-components/2/maintenance-item responded 500 in 158.9253 ms
+System.UnauthorizedAccessException: You're not authorized to carry out this action
+   at Common.Api.Controllers.v1.MaintenanceItemController.PostMaintenanceItem(Int32 failureComponentId, CreateMaintenanceItem maintenanceItem) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\MaintenanceItemController.cs:line 34
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-16 13:51:23.255 +01:00 [ERR] Error Processing Request
+2022-03-16 13:51:49.937 +01:00 [INF] HTTP POST /api/v1/users/authenticate responded 200 in 781.1049 ms
+2022-03-16 13:52:10.131 +01:00 [ERR] HTTP POST /api/v1/failure-components/2/maintenance-item responded 500 in 781.9363 ms
+System.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_maintenance_item_failure_component". The conflict occurred in database "Busy_Brain_AutoServices", table "dbo.failure_component", column 'id'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.<>c__DisplayClass190_0.<ReadAsync>b__1(Task t)
+   at System.Data.SqlClient.SqlDataReader.InvokeRetryable[T](Func`2 moreFunc, TaskCompletionSource`1 source, IDisposable objectToDispose)
+--- End of stack trace from previous location where exception was thrown ---
+   at Common.Data.Repositories.MaintenanceItemRepository.CreateMaintenanceItem(MaintenanceItem maintenanceItem) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Data\Repositories\MaintenanceItemRepository.cs:line 47
+   at Common.Core.CQRS.CommandHandlers.RepairLabourTime.CreateMaintenanceItemCommandHandler.Handle(CreateMaintenanceItemCommand request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\CQRS\CommandHandlers\RepairLabourTime\CreateMaintenanceItemCommandHandler.cs:line 23
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.Services.RepairLabourTimeService.MaintenanceItemService.CreateMaintenanceItem(CreateMaintenanceItem maintenanceItem, Guid modifiedBy) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\MaintenanceItemService.cs:line 43
+   at Common.Api.Controllers.v1.MaintenanceItemController.PostMaintenanceItem(Int32 failureComponentId, CreateMaintenanceItem maintenanceItem) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\MaintenanceItemController.cs:line 32
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+ClientConnectionId:9fd32372-0e61-4d77-9b36-b350d08261f4
+Error Number:547,State:0,Class:16
+2022-03-16 13:52:10.154 +01:00 [ERR] Error Processing Request
+2022-03-16 13:52:10.165 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_maintenance_item_failure_component". The conflict occurred in database "Busy_Brain_AutoServices", table "dbo.failure_component", column 'id'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.<>c__DisplayClass190_0.<ReadAsync>b__1(Task t)
+   at System.Data.SqlClient.SqlDataReader.InvokeRetryable[T](Func`2 moreFunc, TaskCompletionSource`1 source, IDisposable objectToDispose)
+--- End of stack trace from previous location where exception was thrown ---
+   at Common.Data.Repositories.MaintenanceItemRepository.CreateMaintenanceItem(MaintenanceItem maintenanceItem) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Data\Repositories\MaintenanceItemRepository.cs:line 47
+   at Common.Core.CQRS.CommandHandlers.RepairLabourTime.CreateMaintenanceItemCommandHandler.Handle(CreateMaintenanceItemCommand request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\CQRS\CommandHandlers\RepairLabourTime\CreateMaintenanceItemCommandHandler.cs:line 23
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.Services.RepairLabourTimeService.MaintenanceItemService.CreateMaintenanceItem(CreateMaintenanceItem maintenanceItem, Guid modifiedBy) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\MaintenanceItemService.cs:line 43
+   at Common.Api.Controllers.v1.MaintenanceItemController.PostMaintenanceItem(Int32 failureComponentId, CreateMaintenanceItem maintenanceItem) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\MaintenanceItemController.cs:line 32
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+ClientConnectionId:9fd32372-0e61-4d77-9b36-b350d08261f4
+Error Number:547,State:0,Class:16
+2022-03-16 13:57:19.173 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 161.4699 ms
+2022-03-16 13:57:19.503 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 142.4232 ms
+2022-03-16 13:57:59.408 +01:00 [ERR] HTTP POST /api/v1/failure-components/2/maintenance-item responded 500 in 1187.5579 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: Failure component with id : 2 doesn't exist
+   at Common.Core.CQRS.QueryHandlers.RepairLabourTime.GetFailureComponentQueryHandler.Handle(GetFailureComponentQuery request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\CQRS\QueryHandlers\RepairLabourTime\GetFailureComponentQueryHandler.cs:line 30
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.Services.RepairLabourTimeService.FailureComponentService.GetFailureComponent(Int32 id) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\FailureComponentService.cs:line 65
+   at Common.Core.Services.RepairLabourTimeService.MaintenanceItemService.CreateMaintenanceItem(CreateMaintenanceItem maintenanceItem, Guid modifiedBy) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\MaintenanceItemService.cs:line 45
+   at Common.Api.Controllers.v1.MaintenanceItemController.PostMaintenanceItem(Int32 failureComponentId, CreateMaintenanceItem maintenanceItem) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\MaintenanceItemController.cs:line 32
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-16 13:57:59.528 +01:00 [ERR] Error Processing Request
+2022-03-16 13:58:08.301 +01:00 [ERR] HTTP POST /api/v1/failure-components/2/maintenance-item responded 500 in 201.6266 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: Failure component with id : 2 doesn't exist
+   at Common.Core.CQRS.QueryHandlers.RepairLabourTime.GetFailureComponentQueryHandler.Handle(GetFailureComponentQuery request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\CQRS\QueryHandlers\RepairLabourTime\GetFailureComponentQueryHandler.cs:line 30
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.Services.RepairLabourTimeService.FailureComponentService.GetFailureComponent(Int32 id) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\FailureComponentService.cs:line 65
+   at Common.Core.Services.RepairLabourTimeService.MaintenanceItemService.CreateMaintenanceItem(CreateMaintenanceItem maintenanceItem, Guid modifiedBy) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\MaintenanceItemService.cs:line 45
+   at Common.Api.Controllers.v1.MaintenanceItemController.PostMaintenanceItem(Int32 failureComponentId, CreateMaintenanceItem maintenanceItem) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\MaintenanceItemController.cs:line 32
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-16 13:58:08.303 +01:00 [ERR] Error Processing Request
+2022-03-16 13:58:10.572 +01:00 [ERR] HTTP POST /api/v1/failure-components/2/maintenance-item responded 500 in 194.2136 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: Failure component with id : 2 doesn't exist
+   at Common.Core.CQRS.QueryHandlers.RepairLabourTime.GetFailureComponentQueryHandler.Handle(GetFailureComponentQuery request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\CQRS\QueryHandlers\RepairLabourTime\GetFailureComponentQueryHandler.cs:line 30
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.Services.RepairLabourTimeService.FailureComponentService.GetFailureComponent(Int32 id) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\FailureComponentService.cs:line 65
+   at Common.Core.Services.RepairLabourTimeService.MaintenanceItemService.CreateMaintenanceItem(CreateMaintenanceItem maintenanceItem, Guid modifiedBy) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\MaintenanceItemService.cs:line 45
+   at Common.Api.Controllers.v1.MaintenanceItemController.PostMaintenanceItem(Int32 failureComponentId, CreateMaintenanceItem maintenanceItem) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\MaintenanceItemController.cs:line 32
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-16 13:58:10.578 +01:00 [ERR] Error Processing Request
+2022-03-16 13:58:11.980 +01:00 [ERR] HTTP POST /api/v1/failure-components/2/maintenance-item responded 500 in 174.7832 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: Failure component with id : 2 doesn't exist
+   at Common.Core.CQRS.QueryHandlers.RepairLabourTime.GetFailureComponentQueryHandler.Handle(GetFailureComponentQuery request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\CQRS\QueryHandlers\RepairLabourTime\GetFailureComponentQueryHandler.cs:line 30
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.Services.RepairLabourTimeService.FailureComponentService.GetFailureComponent(Int32 id) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\FailureComponentService.cs:line 65
+   at Common.Core.Services.RepairLabourTimeService.MaintenanceItemService.CreateMaintenanceItem(CreateMaintenanceItem maintenanceItem, Guid modifiedBy) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\MaintenanceItemService.cs:line 45
+   at Common.Api.Controllers.v1.MaintenanceItemController.PostMaintenanceItem(Int32 failureComponentId, CreateMaintenanceItem maintenanceItem) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\MaintenanceItemController.cs:line 32
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-16 13:58:11.981 +01:00 [ERR] Error Processing Request
+2022-03-16 13:58:13.010 +01:00 [ERR] HTTP POST /api/v1/failure-components/2/maintenance-item responded 500 in 146.0579 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: Failure component with id : 2 doesn't exist
+   at Common.Core.CQRS.QueryHandlers.RepairLabourTime.GetFailureComponentQueryHandler.Handle(GetFailureComponentQuery request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\CQRS\QueryHandlers\RepairLabourTime\GetFailureComponentQueryHandler.cs:line 30
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.Services.RepairLabourTimeService.FailureComponentService.GetFailureComponent(Int32 id) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\FailureComponentService.cs:line 65
+   at Common.Core.Services.RepairLabourTimeService.MaintenanceItemService.CreateMaintenanceItem(CreateMaintenanceItem maintenanceItem, Guid modifiedBy) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\MaintenanceItemService.cs:line 45
+   at Common.Api.Controllers.v1.MaintenanceItemController.PostMaintenanceItem(Int32 failureComponentId, CreateMaintenanceItem maintenanceItem) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\MaintenanceItemController.cs:line 32
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-16 13:58:13.011 +01:00 [ERR] Error Processing Request
+2022-03-16 13:58:15.163 +01:00 [ERR] HTTP POST /api/v1/failure-components/2/maintenance-item responded 500 in 148.7410 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: Failure component with id : 2 doesn't exist
+   at Common.Core.CQRS.QueryHandlers.RepairLabourTime.GetFailureComponentQueryHandler.Handle(GetFailureComponentQuery request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\CQRS\QueryHandlers\RepairLabourTime\GetFailureComponentQueryHandler.cs:line 30
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.Services.RepairLabourTimeService.FailureComponentService.GetFailureComponent(Int32 id) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\FailureComponentService.cs:line 65
+   at Common.Core.Services.RepairLabourTimeService.MaintenanceItemService.CreateMaintenanceItem(CreateMaintenanceItem maintenanceItem, Guid modifiedBy) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\MaintenanceItemService.cs:line 45
+   at Common.Api.Controllers.v1.MaintenanceItemController.PostMaintenanceItem(Int32 failureComponentId, CreateMaintenanceItem maintenanceItem) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\MaintenanceItemController.cs:line 32
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-16 13:58:15.165 +01:00 [ERR] Error Processing Request
+2022-03-16 13:58:56.752 +01:00 [INF] HTTP POST /api/v1/failure-components/1/maintenance-item responded 200 in 216.6346 ms
+2022-03-16 13:59:12.802 +01:00 [INF] HTTP POST /api/v1/failure-components/1/maintenance-item responded 200 in 214.7447 ms
+2022-03-16 13:59:53.157 +01:00 [ERR] HTTP GET /api/v1/failure-components/2/maintenance-item/3 responded 500 in 129.0138 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: maintenance item with id : 3 doesn't exist
+   at Common.Core.CQRS.QueryHandlers.RepairLabourTime.GetMaintenanceItemQueryHandler.Handle(GetMaintenanceItemQuery request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\CQRS\QueryHandlers\RepairLabourTime\GetMaintenanceItemQueryHandler.cs:line 30
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.Services.RepairLabourTimeService.MaintenanceItemService.GetMaintenanceItem(Int32 failureComponentId, Int32 id) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\MaintenanceItemService.cs:line 70
+   at Common.Api.Controllers.v1.MaintenanceItemController.GetMaintenanceItem(Int32 failureComponentId, Int32 id) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\MaintenanceItemController.cs:line 52
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-16 13:59:53.158 +01:00 [ERR] Error Processing Request
+2022-03-16 14:00:27.639 +01:00 [INF] HTTP GET /api/v1/failure-components/1/maintenance-item/3 responded 200 in 25.1524 ms
+2022-03-16 14:01:52.830 +01:00 [INF] HTTP PUT /api/v1/failure-components/1/maintenance-item/3 responded 200 in 76.9508 ms
+2022-03-16 14:09:34.127 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 185.5149 ms
+2022-03-16 14:09:34.451 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 148.7295 ms
+2022-03-16 14:09:50.645 +01:00 [INF] HTTP GET /api/v1/failure-components/1/maintenance-items/2 responded 200 in 591.4232 ms
+2022-03-16 14:10:01.885 +01:00 [ERR] HTTP GET /api/v1/failure-components/2/maintenance-items/2 responded 500 in 138.7108 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: maintenance item with id : 2 or failure component with id: 2 doesn't exist
+   at Common.Core.CQRS.QueryHandlers.RepairLabourTime.GetMaintenanceItemQueryHandler.Handle(GetMaintenanceItemQuery request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\CQRS\QueryHandlers\RepairLabourTime\GetMaintenanceItemQueryHandler.cs:line 30
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.Services.RepairLabourTimeService.MaintenanceItemService.GetMaintenanceItem(Int32 failureComponentId, Int32 id) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\MaintenanceItemService.cs:line 70
+   at Common.Api.Controllers.v1.MaintenanceItemController.GetMaintenanceItem(Int32 failureComponentId, Int32 id) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\MaintenanceItemController.cs:line 49
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-16 14:10:02.004 +01:00 [ERR] Error Processing Request
+2022-03-16 14:27:57.543 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 176.4711 ms
+2022-03-16 14:27:57.889 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 152.6184 ms
+2022-03-16 14:28:23.118 +01:00 [ERR] HTTP DELETE /api/v1/failure-components/2/maintenance-items/3 responded 500 in 771.0839 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: maintenance item with id : 3 or failure component with id: 2 doesn't exist
+   at Common.Core.CQRS.QueryHandlers.RepairLabourTime.GetMaintenanceItemQueryHandler.Handle(GetMaintenanceItemQuery request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\CQRS\QueryHandlers\RepairLabourTime\GetMaintenanceItemQueryHandler.cs:line 30
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.Services.RepairLabourTimeService.MaintenanceItemService.GetMaintenanceItem(Int32 failureComponentId, Int32 id) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\MaintenanceItemService.cs:line 77
+   at Common.Core.Services.RepairLabourTimeService.MaintenanceItemService.DeleteMaintenanceItem(Int32 failureComponentId, Int32 id) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\MaintenanceItemService.cs:line 70
+   at Common.Api.Controllers.v1.MaintenanceItemController.DeleteMaintenanceItem(Int32 failureComponentId, Int32 id) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\MaintenanceItemController.cs:line 55
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-16 14:28:23.235 +01:00 [ERR] Error Processing Request
+2022-03-16 14:28:34.995 +01:00 [ERR] HTTP DELETE /api/v1/failure-components/2/maintenance-items/3 responded 500 in 183.5718 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: maintenance item with id : 3 or failure component with id: 2 doesn't exist
+   at Common.Core.CQRS.QueryHandlers.RepairLabourTime.GetMaintenanceItemQueryHandler.Handle(GetMaintenanceItemQuery request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\CQRS\QueryHandlers\RepairLabourTime\GetMaintenanceItemQueryHandler.cs:line 30
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.Services.RepairLabourTimeService.MaintenanceItemService.GetMaintenanceItem(Int32 failureComponentId, Int32 id) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\MaintenanceItemService.cs:line 77
+   at Common.Core.Services.RepairLabourTimeService.MaintenanceItemService.DeleteMaintenanceItem(Int32 failureComponentId, Int32 id) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\MaintenanceItemService.cs:line 70
+   at Common.Api.Controllers.v1.MaintenanceItemController.DeleteMaintenanceItem(Int32 failureComponentId, Int32 id) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\MaintenanceItemController.cs:line 55
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-16 14:28:34.998 +01:00 [ERR] Error Processing Request
+2022-03-16 14:28:48.920 +01:00 [INF] HTTP DELETE /api/v1/failure-components/1/maintenance-items/3 responded 200 in 69.4249 ms
+2022-03-16 14:57:08.863 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 187.3338 ms
+2022-03-16 14:57:09.218 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 166.6008 ms
+2022-03-16 14:57:24.119 +01:00 [INF] HTTP GET /api/v1/failure-components/6/maintenance-items responded 200 in 348.4058 ms
+2022-03-16 14:57:31.284 +01:00 [INF] HTTP GET /api/v1/failure-components/1/maintenance-items responded 200 in 37.7220 ms
+2022-03-16 16:13:59.654 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 182.4828 ms
+2022-03-16 16:13:59.999 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 156.8753 ms
+2022-03-16 16:15:52.479 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 157.4952 ms
+2022-03-16 16:15:52.872 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 128.0846 ms
+2022-03-16 16:16:48.281 +01:00 [INF] HTTP POST /api/v1/standard-repair/check-quotation responded 200 in 157.8707 ms
+2022-03-16 16:19:05.375 +01:00 [INF] HTTP POST /api/v1/standard-repair/check-quotation responded 200 in 99274.7793 ms
+2022-03-16 16:19:26.830 +01:00 [INF] HTTP POST /api/v1/standard-repair/check-quotation responded 200 in 5041.2048 ms
+2022-03-16 16:20:34.153 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 172.2902 ms
+2022-03-16 16:20:34.488 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 150.4522 ms
+2022-03-16 16:21:04.139 +01:00 [INF] HTTP POST /api/v1/standard-repair/check-quotation responded 200 in 9996.3602 ms
+2022-03-16 16:21:32.144 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 11057.0202 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: maintenance item with id : 7 or failure component with id: 2 doesn't exist
+   at Common.Core.CQRS.QueryHandlers.RepairLabourTime.GetMaintenanceItemQueryHandler.Handle(GetMaintenanceItemQuery request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\CQRS\QueryHandlers\RepairLabourTime\GetMaintenanceItemQueryHandler.cs:line 30
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.Services.RepairLabourTimeService.MaintenanceItemService.GetMaintenanceItem(Int32 failureComponentId, Int32 id) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\RepairLabourTimeService\MaintenanceItemService.cs:line 77
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairs) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 25
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairPayloads) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 23
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-16 16:21:32.242 +01:00 [ERR] Error Processing Request
+2022-03-16 16:24:12.006 +01:00 [INF] HTTP POST /api/v1/standard-repair/check-quotation responded 200 in 16342.5857 ms
+2022-03-16 16:25:36.529 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 163.9243 ms
+2022-03-16 16:25:36.854 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 147.0246 ms
+2022-03-16 16:26:05.668 +01:00 [INF] HTTP POST /api/v1/standard-repair/check-quotation responded 200 in 596.5747 ms
+2022-03-16 16:26:13.518 +01:00 [INF] HTTP POST /api/v1/standard-repair/check-quotation responded 200 in 31.7857 ms
+2022-03-16 17:04:11.974 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 377.2229 ms
+2022-03-16 17:04:12.727 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 294.7651 ms
+2022-03-16 17:05:55.463 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 768.3678 ms
+2022-03-16 17:05:56.140 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 311.2824 ms
+2022-03-16 17:06:42.306 +01:00 [INF] HTTP POST /api/v1/standard-repair/download-quotation responded 200 in 10484.3404 ms
+2022-03-16 17:06:49.740 +01:00 [INF] HTTP POST /api/v1/standard-repair/download-quotation responded 200 in 1685.2152 ms
+2022-03-16 17:10:30.818 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 580.5276 ms
+2022-03-16 17:10:31.414 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 242.8771 ms
+2022-03-16 17:11:05.863 +01:00 [INF] HTTP POST /api/v1/standard-repair/download-quotation responded 200 in 6300.6730 ms
+2022-03-16 20:49:57.972 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 363.3731 ms
+2022-03-16 20:49:58.887 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 260.9857 ms
+2022-03-16 20:51:00.291 +01:00 [INF] HTTP GET /api/v1/failure-components/1/maintenance-items responded 200 in 1090.2382 ms
+2022-03-16 20:51:39.377 +01:00 [INF] HTTP POST /api/v1/standard-repair/check-quotation responded 200 in 661.2911 ms
+2022-03-16 20:52:35.398 +01:00 [INF] HTTP POST /api/v1/standard-repair/download-quotation responded 200 in 29743.2661 ms
+2022-03-16 20:52:56.397 +01:00 [INF] HTTP POST /api/v1/standard-repair/download-quotation responded 200 in 2242.9734 ms
+2022-03-16 20:53:00.437 +01:00 [INF] HTTP POST /api/v1/standard-repair/download-quotation responded 200 in 2701.5292 ms
+2022-03-16 21:44:30.363 +01:00 [ERR] HTTP POST /api/v1/failure-components responded 500 in 489.0469 ms
+System.UnauthorizedAccessException: You're not authorized to carry out this action
+   at Common.Api.Controllers.v1.FailureComponentController.PostFailureComponent(CreateFailureComponent failureComponent) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\FailureComponentController.cs:line 31
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-16 21:44:30.806 +01:00 [ERR] Error Processing Request
+2022-03-16 21:45:10.019 +01:00 [INF] HTTP POST /api/v1/users/authenticate responded 200 in 974.9589 ms
+2022-03-16 21:45:32.202 +01:00 [INF] HTTP POST /api/v1/failure-components responded 200 in 549.0706 ms
+2022-03-16 21:49:25.935 +01:00 [INF] HTTP POST /api/v1/failure-components/3/maintenance-items responded 200 in 243.9701 ms
+2022-03-16 21:52:26.230 +01:00 [INF] HTTP GET /api/v1/failure-components/3/maintenance-items responded 200 in 45.1985 ms
+2022-03-16 21:55:45.569 +01:00 [INF] HTTP POST /api/v1/standard-repair/check-quotation responded 200 in 46.0879 ms
+2022-03-16 21:57:21.321 +01:00 [INF] HTTP POST /api/v1/failure-components/3/maintenance-items responded 200 in 60.0955 ms
+2022-03-16 21:58:03.344 +01:00 [INF] HTTP GET /api/v1/failure-components/3/maintenance-items responded 200 in 46.4798 ms
+2022-03-16 22:00:18.312 +01:00 [INF] HTTP POST /api/v1/standard-repair/check-quotation responded 200 in 56.4187 ms
+2022-03-16 22:02:02.604 +01:00 [INF] HTTP POST /api/v1/standard-repair/download-quotation responded 200 in 2862.0232 ms

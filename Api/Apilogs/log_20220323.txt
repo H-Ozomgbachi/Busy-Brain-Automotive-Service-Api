@@ -1,0 +1,11 @@
+2022-03-23 23:57:59.669 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 355.1048 ms
+2022-03-23 23:58:00.557 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 343.4374 ms
+2022-03-23 23:58:07.125 +01:00 [INF] HTTP OPTIONS /api/v1/failure-components?PageNumber=1&PageSize=25 responded 204 in 9.6297 ms
+2022-03-23 23:58:08.173 +01:00 [INF] HTTP GET /api/v1/failure-components?PageNumber=1&PageSize=25 responded 200 in 1041.7730 ms
+2022-03-23 23:58:13.858 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/maintenance-items-by-multiple-failure-components responded 204 in 4.2292 ms
+2022-03-23 23:58:13.904 +01:00 [INF] HTTP POST /api/v1/standard-repair/maintenance-items-by-multiple-failure-components responded 200 in 41.2650 ms
+2022-03-23 23:58:19.405 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 0.4000 ms
+2022-03-23 23:58:19.693 +01:00 [INF] HTTP POST /api/v1/standard-repair/check-quotation responded 200 in 285.5831 ms
+2022-03-23 23:58:22.373 +01:00 [INF] HTTP OPTIONS /api/v1/failure-components?PageNumber=1&PageSize=25 responded 204 in 0.4665 ms
+2022-03-23 23:58:22.385 +01:00 [INF] HTTP GET /api/v1/failure-components?PageNumber=1&PageSize=25 responded 200 in 9.2063 ms
+2022-03-23 23:58:24.156 +01:00 [INF] HTTP POST /api/v1/standard-repair/check-quotation responded 200 in 10.1152 ms

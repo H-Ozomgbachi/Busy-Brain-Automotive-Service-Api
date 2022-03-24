@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Common.Database.SqlServer</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{2640a7d7-49a1-4d72-ac72-b02aa0abac5a}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Common.Database.SqlServer</RootNamespace>
+    <AssemblyName>Common.Database.SqlServer</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Tables" />
+    <Folder Include="StoredProcedures" />
+    <Folder Include="PostDeployScripts" />
+    <Folder Include="OneOffScripts" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Script.PostDeployment.sql" />
+    <Build Include="StoredProcedures\usp_Get_User_ByGuid.sql" />
+    <Build Include="StoredProcedures\usp_Get_User_ById.sql" />
+    <None Include="PostDeployScripts\Postdeploy-CreateIndex.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\user_account.sql" />
+    <Build Include="Tables\user_account_audit.sql" />
+    <Build Include="Tables\user_account_events.sql" />
+    <Build Include="StoredProcedures\usp_User_EventAdd.sql" />
+    <Build Include="StoredProcedures\usp_User_Create.sql" />
+    <Build Include="StoredProcedures\usp_User_Update.sql" />
+    <Build Include="Tables\site_settings.sql" />
+    <Build Include="StoredProcedures\usp_Get_User_ByUsername.sql" />
+    <Build Include="Tables\organization.sql" />
+    <Build Include="Tables\route.sql" />
+    <Build Include="Tables\shipment.sql" />
+    <Build Include="Tables\shipment_audit.sql" />
+    <Build Include="Tables\shipment_events.sql" />
+    <Build Include="Tables\shipment_tracking.sql" />
+    <Build Include="Tables\shipper.sql" />
+    <Build Include="Tables\tracker.sql" />
+    <Build Include="Tables\tracker_audit.sql" />
+    <Build Include="Tables\tracker_events.sql" />
+    <Build Include="Tables\tracking_device_events.sql" />
+    <Build Include="StoredProcedures\usp_add_tracking_device_event.sql" />
+    <Build Include="StoredProcedures\usp_organisation_add.sql" />
+    <Build Include="StoredProcedures\usp_route_add.sql" />
+    <Build Include="StoredProcedures\usp_get_all_shipment_last_tracking.sql" />
+    <Build Include="StoredProcedures\usp_get_available_route_trackers.sql" />
+    <Build Include="StoredProcedures\usp_get_org_routes_autosuggest.sql" />
+    <Build Include="StoredProcedures\usp_get_org_routes_byid.sql" />
+    <Build Include="StoredProcedures\usp_Get_Organisation_ById.sql" />
+    <Build Include="StoredProcedures\usp_get_organisations.sql" />
+    <Build Include="StoredProcedures\usp_get_route_byid.sql" />
+    <Build Include="StoredProcedures\usp_get_route_trackers.sql" />
+    <Build Include="StoredProcedures\usp_get_shipment_byid.sql" />
+    <Build Include="StoredProcedures\usp_get_shipment_tracking.sql" />
+    <Build Include="StoredProcedures\usp_get_shipments.sql" />
+    <Build Include="StoredProcedures\usp_Get_Shipper_ById.sql" />
+    <Build Include="StoredProcedures\usp_get_shippers.sql" />
+    <Build Include="StoredProcedures\usp_organisation_event_add.sql" />
+    <Build Include="StoredProcedures\usp_route_event_add.sql" />
+    <Build Include="StoredProcedures\usp_route_update.sql" />
+    <Build Include="StoredProcedures\usp_shipment_add.sql" />
+    <Build Include="StoredProcedures\usp_shipment_event_add.sql" />
+    <Build Include="StoredProcedures\usp_shipment_tracking_upsert.sql" />
+    <Build Include="StoredProcedures\usp_shipment_update.sql" />
+    <Build Include="StoredProcedures\usp_shipper_add.sql" />
+    <Build Include="StoredProcedures\usp_shipper_event_add.sql" />
+    <Build Include="StoredProcedures\usp_tracker_upsert.sql" />
+    <Build Include="Tables\organisation_events.sql" />
+    <Build Include="Tables\route_events.sql" />
+    <Build Include="Tables\shipper_events.sql" />
+    <Build Include="StoredProcedures\usp_get_shipment_by_tracker.sql" />
+    <Build Include="StoredProcedures\usp_get_tracking_device_events.sql" />
+    <Build Include="StoredProcedures\usp_is_tracker_on_active_shipment.sql" />
+    <Build Include="StoredProcedures\usp_update_tracking_device_event.sql" />
+    <Build Include="StoredProcedures\usp_get_shipment_delays.sql" />
+    <Build Include="StoredProcedures\usp_shipment_delay_upsert.sql" />
+    <Build Include="Tables\shipment_delay.sql" />
+    <Build Include="StoredProcedures\usp_get_users.sql" />
+    <Build Include="StoredProcedures\usp_does_username_exist.sql" />
+    <Build Include="StoredProcedures\usp_get_tracking_by_coordinates.sql" />
+    <Build Include="StoredProcedures\usp_get_tracking_device_state.sql" />
+    <Build Include="StoredProcedures\usp_shipment_delay_exists.sql" />
+<<<<<<< HEAD
+    <Build Include="StoredProcedures\usp_investor_add.sql" />
+    <Build Include="Tables\investor.sql" />
+    <Build Include="Tables\investor_events.sql" />
+    <Build Include="StoredProcedures\usp_investor_event_add.sql" />
+    <Build Include="StoredProcedures\usp_Get_Investor_ById.sql" />
+    <Build Include="StoredProcedures\usp_does_investor_email_exist.sql" />
+    <Build Include="Tables\bank_account.sql" />
+    <Build Include="Tables\bank_account_event.sql" />
+    <Build Include="StoredProcedures\usp_bank_account_add.sql" />
+    <Build Include="StoredProcedures\usp_bank_account_event_add.sql" />
+    <Build Include="StoredProcedures\usp_get_bank_account_byId.sql" />
+    <Build Include="StoredProcedures\usp_get_investors.sql" />
+    <Build Include="StoredProcedures\usp_get_bank_accounts.sql" />
+    <Build Include="Tables\driver.sql" />
+    <Build Include="Tables\driver_events.sql" />
+    <Build Include="StoredProcedures\usp_driver_add.sql" />
+    <Build Include="StoredProcedures\usp_get_driver_byId.sql" />
+    <Build Include="StoredProcedures\usp_driver_event_add.sql" />
+    <Build Include="StoredProcedures\usp_get_drivers.sql" />
+    <Build Include="Tables\fleet.sql" />
+    <Build Include="StoredProcedures\usp_fleet_add.sql" />
+    <Build Include="StoredProcedures\usp_get_fleet_byId.sql" />
+    <Build Include="StoredProcedures\usp_get_fleets_byInvestor.sql" />
+=======
+    <Build Include="StoredProcedures\usp_User_Modify_Role.sql" />
+    <Build Include="StoredProcedures\usp_get_users_in_organisation.sql" />
+>>>>>>> feature/haulage-hub-ui
+  </ItemGroup>
+</Project>

@@ -1,0 +1,157 @@
+2022-03-15 12:39:56.569 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 278.1203 ms
+2022-03-15 12:39:57.278 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 182.3671 ms
+2022-03-15 12:45:06.440 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 187.2514 ms
+2022-03-15 12:45:06.884 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 136.9609 ms
+2022-03-15 12:46:53.886 +01:00 [ERR] HTTP POST /api/v1/users/register responded 500 in 1287.9064 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: Organisation validation error
+   at Common.Core.Services.OrganisationService.Create(OrganisationPayload org, Guid currentUser) in C:\Users\HP\Desktop\Paid-Projects\start-template\src\api\Core\Services\OrganisationService.cs:line 41
+   at Common.Core.Services.UserService.Create(RegisterUserModel user, Guid currentUser) in C:\Users\HP\Desktop\Paid-Projects\start-template\src\api\Core\Services\UserService.cs:line 158
+   at Common.Api.Controllers.v1.UserController.PostAsync(RegisterUserModel model) in C:\Users\HP\Desktop\Paid-Projects\start-template\src\api\Api\Controllers\v1\UserController.cs:line 78
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-15 12:46:54.306 +01:00 [ERR] Error Processing Request
+2022-03-15 12:47:21.611 +01:00 [ERR] HTTP POST /api/v1/users/register responded 500 in 388.0680 ms
+System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'usp_organisation_event_add'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Common.Data.Repositories.OrganisationRepository.AddEventToAudit(SqlCommand cmd, IEvent event, Organisation org, Guid userID) in C:\Users\HP\Desktop\Paid-Projects\start-template\src\api\Data\Repositories\OrganisationRepository.cs:line 125
+   at Common.Data.Repositories.OrganisationRepository.CreateAsync(Organisation org, Guid changedby) in C:\Users\HP\Desktop\Paid-Projects\start-template\src\api\Data\Repositories\OrganisationRepository.cs:line 46
+   at Common.Core.CQRS.CommandHandlers.Organisation.CreateOrganisationCommandHandler.Handle(CreateOrganisationCommand request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\start-template\src\api\Core\CQRS\CommandHandlers\Organisation\CreateOrganisationCommandHandler.cs:line 22
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.Services.OrganisationService.Create(OrganisationPayload org, Guid currentUser) in C:\Users\HP\Desktop\Paid-Projects\start-template\src\api\Core\Services\OrganisationService.cs:line 41
+   at Common.Core.Services.UserService.Create(RegisterUserModel user, Guid currentUser) in C:\Users\HP\Desktop\Paid-Projects\start-template\src\api\Core\Services\UserService.cs:line 158
+   at Common.Api.Controllers.v1.UserController.PostAsync(RegisterUserModel model) in C:\Users\HP\Desktop\Paid-Projects\start-template\src\api\Api\Controllers\v1\UserController.cs:line 78
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+ClientConnectionId:c7b52330-022d-47b5-8be0-1c4e0873365f
+Error Number:2812,State:62,Class:16
+2022-03-15 12:47:21.621 +01:00 [ERR] Error Processing Request
+2022-03-15 12:47:21.631 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'usp_organisation_event_add'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Common.Data.Repositories.OrganisationRepository.AddEventToAudit(SqlCommand cmd, IEvent event, Organisation org, Guid userID) in C:\Users\HP\Desktop\Paid-Projects\start-template\src\api\Data\Repositories\OrganisationRepository.cs:line 125
+   at Common.Data.Repositories.OrganisationRepository.CreateAsync(Organisation org, Guid changedby) in C:\Users\HP\Desktop\Paid-Projects\start-template\src\api\Data\Repositories\OrganisationRepository.cs:line 46
+   at Common.Core.CQRS.CommandHandlers.Organisation.CreateOrganisationCommandHandler.Handle(CreateOrganisationCommand request, CancellationToken cancellationToken) in C:\Users\HP\Desktop\Paid-Projects\start-template\src\api\Core\CQRS\CommandHandlers\Organisation\CreateOrganisationCommandHandler.cs:line 22
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Common.Core.Services.OrganisationService.Create(OrganisationPayload org, Guid currentUser) in C:\Users\HP\Desktop\Paid-Projects\start-template\src\api\Core\Services\OrganisationService.cs:line 41
+   at Common.Core.Services.UserService.Create(RegisterUserModel user, Guid currentUser) in C:\Users\HP\Desktop\Paid-Projects\start-template\src\api\Core\Services\UserService.cs:line 158
+   at Common.Api.Controllers.v1.UserController.PostAsync(RegisterUserModel model) in C:\Users\HP\Desktop\Paid-Projects\start-template\src\api\Api\Controllers\v1\UserController.cs:line 78
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+ClientConnectionId:c7b52330-022d-47b5-8be0-1c4e0873365f
+Error Number:2812,State:62,Class:16
+2022-03-15 12:55:29.680 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 153.9553 ms
+2022-03-15 12:55:30.061 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 124.7299 ms
+2022-03-15 12:56:10.361 +01:00 [INF] HTTP POST /api/v1/users/register responded 200 in 728.8755 ms
+2022-03-15 12:58:03.123 +01:00 [INF] HTTP POST /api/v1/users/authenticate responded 200 in 103.2746 ms
+2022-03-15 12:58:36.037 +01:00 [ERR] HTTP GET /api/v1/organisations responded 500 in 251.6435 ms
+System.UnauthorizedAccessException: User does not have access to view this organisation
+   at Common.Api.Controllers.v1.OrganisationController.GetAsync() in C:\Users\HP\Desktop\Paid-Projects\start-template\src\api\Api\Controllers\v1\OrganisationController.cs:line 39
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-15 12:58:36.146 +01:00 [ERR] Error Processing Request
+2022-03-15 12:59:19.029 +01:00 [INF] HTTP POST /api/v1/users/authenticate responded 200 in 21.8814 ms
+2022-03-15 12:59:38.694 +01:00 [INF] HTTP GET /api/v1/organisations responded 200 in 18.4199 ms
+2022-03-15 12:59:50.873 +01:00 [INF] HTTP GET /api/v1/organisations/1 responded 200 in 72.9537 ms
+2022-03-15 13:00:05.787 +01:00 [INF] HTTP GET /api/v1/users responded 200 in 19.7480 ms
+2022-03-15 13:00:21.257 +01:00 [INF] HTTP GET /api/v1/users/organisations/1 responded 200 in 27.1259 ms
+2022-03-15 13:01:19.475 +01:00 [INF] HTTP POST /api/v1/users/add-user-to-org responded 200 in 55.5134 ms
+2022-03-15 13:02:17.017 +01:00 [INF] HTTP PATCH /api/v1/users/a53c619f-57a4-ec11-a5e9-842afdcd4ad2/modify-role responded 200 in 49.0562 ms
+2022-03-15 13:05:38.775 +01:00 [INF] HTTP GET /api/v1/users/a53c619f-57a4-ec11-a5e9-842afdcd4ad2 responded 200 in 55.6925 ms
+2022-03-15 13:07:10.824 +01:00 [INF] HTTP PUT /api/v1/users/a53c619f-57a4-ec11-a5e9-842afdcd4ad2 responded 200 in 89.9983 ms
+2022-03-15 14:04:26.679 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 197.1750 ms
+2022-03-15 14:04:27.089 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 146.0880 ms
+2022-03-15 14:09:24.924 +01:00 [INF] HTTP GET /api/v1/home/top-truck-requests responded 404 in 28.4550 ms
+2022-03-15 14:10:41.612 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 246.0445 ms
+2022-03-15 14:10:42.133 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 180.2514 ms
+2022-03-15 14:10:51.579 +01:00 [INF] HTTP GET /api/v1/home/top-truck-requests responded 404 in 16.7039 ms
+2022-03-15 14:11:07.780 +01:00 [INF] HTTP GET /api/v1/home/top-truck-requests responded 404 in 2.6625 ms
+2022-03-15 14:19:16.684 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 150.7092 ms
+2022-03-15 14:19:17.060 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 113.0479 ms
+2022-03-15 15:04:36.694 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 199.8041 ms
+2022-03-15 15:04:37.049 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 132.8049 ms

@@ -1,0 +1,729 @@
+2022-03-24 00:00:54.694 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 180.4017 ms
+2022-03-24 00:00:54.995 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 128.2629 ms
+2022-03-24 00:01:04.705 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 5.4877 ms
+2022-03-24 00:01:05.726 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 1017.5052 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: You did not select any maintenance item
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 37
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-24 00:01:06.297 +01:00 [ERR] Error Processing Request
+2022-03-24 00:05:19.067 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 3.4762 ms
+2022-03-24 00:05:19.151 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 80.6107 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: You did not select any maintenance item
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 37
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-24 00:05:19.152 +01:00 [ERR] Error Processing Request
+2022-03-24 00:05:24.267 +01:00 [INF] HTTP OPTIONS /api/v1/failure-components?PageNumber=1&PageSize=25 responded 204 in 0.3250 ms
+2022-03-24 00:05:24.595 +01:00 [INF] HTTP GET /api/v1/failure-components?PageNumber=1&PageSize=25 responded 200 in 323.8368 ms
+2022-03-24 00:05:26.540 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 0.7858 ms
+2022-03-24 00:05:26.615 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 71.1803 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: You did not select any maintenance item
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 37
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-24 00:05:26.617 +01:00 [ERR] Error Processing Request
+2022-03-24 00:06:27.183 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 0.8757 ms
+2022-03-24 00:06:27.252 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 64.8647 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: You did not select any maintenance item
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 37
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-24 00:06:27.255 +01:00 [ERR] Error Processing Request
+2022-03-24 00:06:31.633 +01:00 [INF] HTTP OPTIONS /api/v1/failure-components?PageNumber=1&PageSize=25 responded 204 in 0.4796 ms
+2022-03-24 00:06:31.654 +01:00 [INF] HTTP GET /api/v1/failure-components?PageNumber=1&PageSize=25 responded 200 in 15.9715 ms
+2022-03-24 00:06:33.791 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 0.3120 ms
+2022-03-24 00:06:33.866 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 72.0730 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: You did not select any maintenance item
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 37
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-24 00:06:33.868 +01:00 [ERR] Error Processing Request
+2022-03-24 00:06:40.313 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 0.2728 ms
+2022-03-24 00:06:40.389 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 73.9007 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: You did not select any maintenance item
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 37
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-24 00:06:40.390 +01:00 [ERR] Error Processing Request
+2022-03-24 00:06:44.385 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 86.0343 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: You did not select any maintenance item
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 37
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-24 00:06:44.386 +01:00 [ERR] Error Processing Request
+2022-03-24 00:06:47.762 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 0.2684 ms
+2022-03-24 00:06:47.838 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 73.3334 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: You did not select any maintenance item
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 37
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-24 00:06:47.840 +01:00 [ERR] Error Processing Request
+2022-03-24 00:07:56.535 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 3.7355 ms
+2022-03-24 00:07:56.600 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 62.0387 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: You did not select any maintenance item
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 37
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-24 00:07:56.602 +01:00 [ERR] Error Processing Request
+2022-03-24 00:08:00.883 +01:00 [INF] HTTP OPTIONS /api/v1/failure-components?PageNumber=1&PageSize=25 responded 204 in 0.2058 ms
+2022-03-24 00:08:00.904 +01:00 [INF] HTTP GET /api/v1/failure-components?PageNumber=1&PageSize=25 responded 200 in 16.3421 ms
+2022-03-24 00:08:02.295 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 0.1308 ms
+2022-03-24 00:08:02.367 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 69.0237 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: You did not select any maintenance item
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 37
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-24 00:08:02.368 +01:00 [ERR] Error Processing Request
+2022-03-24 00:08:26.229 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 4.5769 ms
+2022-03-24 00:08:26.294 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 61.7722 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: You did not select any maintenance item
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 37
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-24 00:08:26.295 +01:00 [ERR] Error Processing Request
+2022-03-24 00:08:49.453 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 0.2869 ms
+2022-03-24 00:08:49.529 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 72.1819 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: You did not select any maintenance item
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 37
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-24 00:08:49.530 +01:00 [ERR] Error Processing Request
+2022-03-24 00:08:52.362 +01:00 [INF] HTTP OPTIONS /api/v1/failure-components?PageNumber=1&PageSize=25 responded 204 in 0.1447 ms
+2022-03-24 00:08:52.379 +01:00 [INF] HTTP GET /api/v1/failure-components?PageNumber=1&PageSize=25 responded 200 in 12.2594 ms
+2022-03-24 00:08:56.749 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 0.1668 ms
+2022-03-24 00:08:56.834 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 83.1728 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: You did not select any maintenance item
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 37
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-24 00:08:56.836 +01:00 [ERR] Error Processing Request
+2022-03-24 00:09:03.334 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 0.3231 ms
+2022-03-24 00:09:03.417 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 80.2201 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: You did not select any maintenance item
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 37
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-24 00:09:03.418 +01:00 [ERR] Error Processing Request
+2022-03-24 00:09:23.791 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 0.1883 ms
+2022-03-24 00:09:23.854 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 57.5767 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: You did not select any maintenance item
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 37
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-24 00:09:23.855 +01:00 [ERR] Error Processing Request
+2022-03-24 00:09:27.991 +01:00 [INF] HTTP OPTIONS /api/v1/failure-components?PageNumber=1&PageSize=25 responded 204 in 0.0821 ms
+2022-03-24 00:09:28.028 +01:00 [INF] HTTP GET /api/v1/failure-components?PageNumber=1&PageSize=25 responded 200 in 29.5550 ms
+2022-03-24 00:09:30.628 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 0.2785 ms
+2022-03-24 00:09:30.695 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 65.3753 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: You did not select any maintenance item
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 37
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-24 00:09:30.696 +01:00 [ERR] Error Processing Request
+2022-03-24 00:09:57.663 +01:00 [INF] HTTP OPTIONS /api/v1/failure-components?PageNumber=1&PageSize=25 responded 204 in 0.0669 ms
+2022-03-24 00:09:57.697 +01:00 [INF] HTTP GET /api/v1/failure-components?PageNumber=1&PageSize=25 responded 200 in 28.0757 ms
+2022-03-24 00:10:03.625 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 0.3081 ms
+2022-03-24 00:10:03.692 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 65.1929 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: You did not select any maintenance item
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 37
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-24 00:10:03.693 +01:00 [ERR] Error Processing Request
+2022-03-24 00:10:15.941 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 0.3563 ms
+2022-03-24 00:10:16.010 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 66.9484 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: You did not select any maintenance item
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 37
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-24 00:10:16.011 +01:00 [ERR] Error Processing Request
+2022-03-24 00:10:48.303 +01:00 [INF] HTTP OPTIONS /api/v1/failure-components?PageNumber=1&PageSize=25 responded 204 in 0.0742 ms
+2022-03-24 00:10:48.342 +01:00 [INF] HTTP GET /api/v1/failure-components?PageNumber=1&PageSize=25 responded 200 in 33.7016 ms
+2022-03-24 00:10:51.244 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 0.0699 ms
+2022-03-24 00:10:51.313 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 67.2576 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: You did not select any maintenance item
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 37
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-24 00:10:51.314 +01:00 [ERR] Error Processing Request
+2022-03-24 00:11:34.109 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 0.1088 ms
+2022-03-24 00:11:34.179 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 63.7351 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: You did not select any maintenance item
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 37
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-24 00:11:34.179 +01:00 [ERR] Error Processing Request
+2022-03-24 00:11:48.584 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 0.1063 ms
+2022-03-24 00:11:48.648 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 62.1493 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: You did not select any maintenance item
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 37
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-24 00:11:48.649 +01:00 [ERR] Error Processing Request
+2022-03-24 00:12:39.833 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 0.1305 ms
+2022-03-24 00:12:39.916 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 76.4269 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: You did not select any maintenance item
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 37
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-24 00:12:39.917 +01:00 [ERR] Error Processing Request
+2022-03-24 00:13:09.031 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 0.1810 ms
+2022-03-24 00:13:09.098 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 62.0765 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: You did not select any maintenance item
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 37
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-24 00:13:09.099 +01:00 [ERR] Error Processing Request
+2022-03-24 00:13:21.562 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 0.0896 ms
+2022-03-24 00:13:21.627 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 63.3835 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: You did not select any maintenance item
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 37
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-24 00:13:21.628 +01:00 [ERR] Error Processing Request
+2022-03-24 00:13:36.562 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/maintenance-items-by-multiple-failure-components responded 204 in 0.0704 ms
+2022-03-24 00:13:36.595 +01:00 [INF] HTTP POST /api/v1/standard-repair/maintenance-items-by-multiple-failure-components responded 200 in 29.9378 ms
+2022-03-24 00:13:41.784 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 0.3171 ms
+2022-03-24 00:13:42.005 +01:00 [INF] HTTP POST /api/v1/standard-repair/check-quotation responded 200 in 218.3310 ms
+2022-03-24 00:14:00.635 +01:00 [INF] HTTP OPTIONS /api/v1/failure-components?PageNumber=1&PageSize=25 responded 204 in 0.0641 ms
+2022-03-24 00:14:00.647 +01:00 [INF] HTTP GET /api/v1/failure-components?PageNumber=1&PageSize=25 responded 200 in 8.9563 ms
+2022-03-24 00:14:11.161 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 0.2476 ms
+2022-03-24 00:14:11.225 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 62.2199 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: You did not select any maintenance item
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 37
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-24 00:14:11.226 +01:00 [ERR] Error Processing Request
+2022-03-24 00:16:54.053 +01:00 [INF] HTTP OPTIONS /api/v1/failure-components?PageNumber=1&PageSize=25 responded 204 in 0.0891 ms
+2022-03-24 00:16:54.084 +01:00 [INF] HTTP GET /api/v1/failure-components?PageNumber=1&PageSize=25 responded 200 in 27.2006 ms
+2022-03-24 00:16:56.070 +01:00 [INF] HTTP GET /api/v1/failure-components?PageNumber=1&PageSize=25 responded 200 in 11.0434 ms
+2022-03-24 00:17:10.022 +01:00 [INF] HTTP OPTIONS /api/v1/failure-components?PageNumber=1&PageSize=25 responded 204 in 0.0406 ms
+2022-03-24 00:17:10.031 +01:00 [INF] HTTP GET /api/v1/failure-components?PageNumber=1&PageSize=25 responded 200 in 6.7150 ms
+2022-03-24 00:17:17.068 +01:00 [INF] HTTP OPTIONS /api/v1/failure-components?PageNumber=1&PageSize=25 responded 204 in 0.2215 ms
+2022-03-24 00:17:17.078 +01:00 [INF] HTTP GET /api/v1/failure-components?PageNumber=1&PageSize=25 responded 200 in 8.0739 ms
+2022-03-24 00:17:25.317 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/maintenance-items-by-multiple-failure-components responded 204 in 0.0592 ms
+2022-03-24 00:17:25.329 +01:00 [INF] HTTP POST /api/v1/standard-repair/maintenance-items-by-multiple-failure-components responded 200 in 8.8750 ms
+2022-03-24 00:17:32.158 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/maintenance-items-by-multiple-failure-components responded 204 in 0.0704 ms
+2022-03-24 00:17:32.170 +01:00 [INF] HTTP POST /api/v1/standard-repair/maintenance-items-by-multiple-failure-components responded 200 in 9.4412 ms
+2022-03-24 00:17:41.165 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 0.2268 ms
+2022-03-24 00:17:41.182 +01:00 [INF] HTTP POST /api/v1/standard-repair/check-quotation responded 200 in 15.0258 ms
+2022-03-24 00:24:46.833 +01:00 [INF] HTTP OPTIONS /api/v1/failure-components?PageNumber=1&PageSize=25 responded 204 in 0.1184 ms
+2022-03-24 00:24:46.870 +01:00 [INF] HTTP GET /api/v1/failure-components?PageNumber=1&PageSize=25 responded 200 in 31.7572 ms
+2022-03-24 00:25:02.869 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/maintenance-items-by-multiple-failure-components responded 204 in 0.3340 ms
+2022-03-24 00:25:02.881 +01:00 [INF] HTTP POST /api/v1/standard-repair/maintenance-items-by-multiple-failure-components responded 200 in 9.0128 ms
+2022-03-24 00:25:05.063 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 0.2899 ms
+2022-03-24 00:25:05.124 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 58.6916 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: You did not select any maintenance item
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 37
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-24 00:25:05.125 +01:00 [ERR] Error Processing Request
+2022-03-24 00:25:44.228 +01:00 [INF] HTTP OPTIONS /api/v1/failure-components?PageNumber=1&PageSize=25 responded 204 in 0.0663 ms
+2022-03-24 00:25:44.261 +01:00 [INF] HTTP GET /api/v1/failure-components?PageNumber=1&PageSize=25 responded 200 in 24.6165 ms
+2022-03-24 00:26:05.964 +01:00 [INF] HTTP OPTIONS /api/v1/failure-components?PageNumber=1&PageSize=25 responded 204 in 0.0717 ms
+2022-03-24 00:26:06.002 +01:00 [INF] HTTP GET /api/v1/failure-components?PageNumber=1&PageSize=25 responded 200 in 28.4589 ms
+2022-03-24 00:26:09.346 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 0.2993 ms
+2022-03-24 00:26:09.416 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 67.1519 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: You did not select any maintenance item
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 37
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-24 00:26:09.417 +01:00 [ERR] Error Processing Request
+2022-03-24 00:26:47.327 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 0.0665 ms
+2022-03-24 00:26:47.390 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 57.0708 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: You did not select any maintenance item
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 37
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-24 00:26:47.391 +01:00 [ERR] Error Processing Request
+2022-03-24 00:26:57.009 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 0.0538 ms
+2022-03-24 00:26:57.069 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 58.9714 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: You did not select any maintenance item
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 37
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-24 00:26:57.070 +01:00 [ERR] Error Processing Request
+2022-03-24 00:27:06.060 +01:00 [INF] HTTP OPTIONS /api/v1/standard-repair/check-quotation responded 204 in 0.1489 ms
+2022-03-24 00:27:06.127 +01:00 [ERR] HTTP POST /api/v1/standard-repair/check-quotation responded 500 in 62.1521 ms
+Common.Contracts.Exceptions.Types.BusinessLogicException: You did not select any maintenance item
+   at Common.Core.Services.StandardRepairFeature.StandardRepairService.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Core\Services\StandardRepairFeature\StandardRepairService.cs:line 37
+   at Common.Api.Controllers.v1.StandardRepairFeatureController.GetStandardRepairQuotation(List`1 standardRepairCodes) in C:\Users\HP\Desktop\Paid-Projects\Busy-Brain\src\api\Api\Controllers\v1\StandardRepairFeatureController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-03-24 00:27:06.128 +01:00 [ERR] Error Processing Request
+2022-03-24 00:27:17.020 +01:00 [INF] HTTP OPTIONS /api/v1/failure-components?PageNumber=1&PageSize=25 responded 204 in 0.0469 ms
+2022-03-24 00:27:17.029 +01:00 [INF] HTTP GET /api/v1/failure-components?PageNumber=1&PageSize=25 responded 200 in 5.9761 ms
+2022-03-24 00:29:49.586 +01:00 [INF] HTTP OPTIONS /api/v1/failure-components?PageNumber=1&PageSize=25 responded 204 in 0.1033 ms
+2022-03-24 00:29:49.617 +01:00 [INF] HTTP GET /api/v1/failure-components?PageNumber=1&PageSize=25 responded 200 in 26.3020 ms

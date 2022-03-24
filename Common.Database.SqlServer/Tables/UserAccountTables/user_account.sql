@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[user_account]
+(
+	[id] UNIQUEIDENTIFIER DEFAULT (newsequentialid()) NOT NULL, 
+    [firstname] NVARCHAR(256) NOT NULL, 
+    [lastname] NVARCHAR(256) NOT NULL,     
+    [email] NVARCHAR(300) NOT NULL, 
+    [username] NVARCHAR(300) NOT NULL,
+    [password_hash] varbinary(max) NOT NULL,
+    [password_salt] varbinary(max) NOT NULL,
+    [phone] NVARCHAR(50) NOT NULL,
+    [country_code] NVARCHAR(10) NOT NULL,
+    [roles] NVARCHAR(Max) NOT NULL,
+    [version] INT NULL DEFAULT 1, 
+    [status]  INT NOT NULL DEFAULT 1, 
+    [password_reset_token] UNIQUEIDENTIFIER NOT NULL,
+    [created_utc] DATETIME2 NOT NULL CONSTRAINT DF_user_created DEFAULT GETUTCDATE(), 
+    [last_modified_utc] DATETIME2 NOT NULL DEFAULT GETUTCDATE(), 
+    [last_login_utc] DATETIME2 NOT NULL DEFAULT GETUTCDATE(),
+    [is_deleted] BIT NOT NULL DEFAULT 0,
+    [force_password_reset] BIT NOT NULL DEFAULT 0,
+    [record_Id] INT IDENTITY (1, 1) NOT NULL,
+    [organisation_id] INT NOT  NULL,
+	[position_in_organisation] INT NOT  NULL,
+    PRIMARY KEY CLUSTERED ([record_Id] ASC),
+    CONSTRAINT [FK_user_organisation] FOREIGN KEY (organisation_id) REFERENCES organisation(id)
+)

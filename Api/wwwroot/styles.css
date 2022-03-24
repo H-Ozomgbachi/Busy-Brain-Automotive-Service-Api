@@ -1,0 +1,39 @@
+body {
+    background-color: #eee;
+}
+
+.header {
+    text-align: center;
+    color: rgb(112, 27, 8);
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border: 1px solid gray;
+  padding: 15px;
+  font-size: 22px;
+  text-align: center;
+}
+
+table th {
+    background-color: rgb(112, 27, 8);
+    color: white;
+    padding: 1.5rem 0;
+}
+
+table td {
+    color: #444;
+    padding: 1.5rem 0;
+}
+
+.standard-repair-table-footer {
+    background-color: rgba(112, 27, 8, 0.9);
+    color: #fff;
+}
